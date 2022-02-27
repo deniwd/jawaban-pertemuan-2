@@ -1,147 +1,193 @@
 // Conditional
 
-// Study Case 1
+// Task 1
 
 /**
- * Nilai dari Berat
+ * Klasifikasi level untuk karakter dari sebuah game
  * 
- * Jika berat di atas 100, maka di sebut "Obesitas"
- * Jika berat di atas 85 sampai 100, maka di sebut "Overweight"
- * Jika berat di atas 70 sampai 85, maka di sebut "Normal"
- * JIka berat d atas 50 sampai 70, maka di sebut "Kurus"
- * Jika berat di bawah 50, maka di sebut "Overskinny"
+ * Jika Power lebih dari 100, maka Status disebut "Expert"
+ * Jika Power di atas 70 sampai 100, maka Status disebut "Pro"
+ * Jika Power di atas 50 sampai 70, maka Status disebut "Normal"
+ * Jika Power di atas 30 sampai 50, maka Status disebut "Basic"
+ * Jika Power di bawah 30, maka Status disebut "Beginner"
  */
 
 // PSEUDOCODE
 /**
- * STORE weight WITH ANY NUMBER
+ * STORE Power WITH ANY NUMBER
  * 
- * IF weight GREATER THAN 100 THEN
- *  DISPLAY "Obesitas"
- * ELSE IF weight GREATER THAN 85 AND LESS THAN EQUAL 100 THEN
- *  DISPLAY "Overweight"
- * ELSE IF weight GREATER THAN 70 AND LESS THAN EQUAL 85 THEN
+ * IF Power GREATER THAN 100 THEN
+ *  DISPLAY "Expert"
+ * ELSE IF Power GREATER THAN 70 AND LESS THAN EQUAL 100 THEN
+ *  DISPLAY "Pro"
+ * ELSE IF Power GREATER THAN 50 AND LESS THAN EQUAL 70 THEN
  *  DISPLAY "Normal"
- * ELSE IF weight GREATER THAN 50 AND LESS THAN EQUAL 70 THEN
- *  DISPLAY "Kurus"
- * ELSE IF weight LESS THAN EQUAL 50 THEN
- *  DISPLAY "Overskinny"
+ * ELSE IF Power GREATER THAN 30 AND LESS THAN EQUAL 50 THEN
+ *  DISPLAY "Basic"
+ * ELSE IF Power LESS THAN EQUAL 30 THEN
+ *  DISPLAY "Beginner"
  * END IF
  */
 
 // CODING
 
-// var weight = 135;
+var Power = 75;
 
-// if (weight > 100) {
-//     console.log("Obesitas")
-// } else if (weight > 85 && weight <= 100) {
-//     console.log("Overweight")
-// } else if (weight > 70 && weight <= 85) {
-//     console.log("Normal")
-// } else if (weight > 50 && weight <= 70) {
-//     console.log("Kurus")
-// } else if (weight <= 50) {
-//     console.log("Overskinny")
-// }
+if (Power > 100) {
+     console.log("Character is Expert")
+ } else if (Power > 70 && Power <= 100) {
+     console.log("Character is Pro")
+ } else if (Power > 50 && Power <= 70) {
+     console.log("Character is Normal")
+ } else if (Power > 30 && Power <= 50) {
+     console.log("Character is Basic")
+ } else if (Power <= 30) {
+     console.log("Character is Beginner")
+ }
 
 
-// STudy Case 2
+// Task 2
 
 /**
- * Jika access kosong, maka tampilkan "Input access"
- * Access public, jika level di bawah 5 maka tampilkan "Public di bawah 5"
- * Access public, jika level di atas 5 maka tampilkan "Public di atas 5"
- * Access public, jika level sama dengan 5 maka tampilkan "Public five"
+ * Algoritma
+ * 
+ * Vending maching memberikan minuman input string
+ * 
+ * Jika minuman kosong, maka tampilkan "Input minuman"
+ * Jika minuman diinput "Sweet Tea" , maka tampilkan "You choose Sweet Tea, thanks"
+ * Jika minuman diinput "Plain Tea" , maka tampilkan "You choose Plain Tea, thanks"
+ * Jika minuman diinput "Boba" , maka tampilkan "You choose Boba, thanks"
+ * Jika minuman diinput "Milk Coffee" , maka tampilkan "You choose Milk Coffee, thanks"
+ * Jika minuman diinput "Choco Ice" , maka tampilkan "You choose Choco Ice, thanks"
+ * Jika minuman diinput salah, tampilkan "minuman is not defined"
  *
- * Access private, jika level di bawah 5 maka tampilkan "Private di bawah 5"
- * Access private, jika level di atas 5 maka tampilkan "Private di atas 5"
- * Access private, jika level sama dengan 5 maka tampilkan "Private five"
- *
- * Access protected, jika level di bawah 5 maka tampilkan "Protected di bawah 5"
- * Access protected, jika level di atas 5 maka tampilkan "Protected di atas 5"
- * Access protected, jika level sama dengan 5 maka tampilkan "Protected five"
- *
- * Jika access salah, tampilkan "Access is not defined"
- *
- * Buat Algoritma, Pseudocode dan Codingan
- */
-
 // PSEUDOCODE
 
 /**
- * STORE access WITH ANY STRING
- * STORE level WITH ANY NUMBER
+ * STORE minuman WITH ANY STRING
  * 
- * IF access EQUAL "public" THEN
- *  IF level LESS THAN 5 THEN
- *      DISPLAY "Public di bawah 5"
- *  ELSE IF level GREATER THAN 5 THEN
- *      DISPLAY "Public di atas 5"
- *  ELSE 
- *      DISPLAY "Public five"
- *  END IF
- * ELSE IF access EQUAL "private" THEN
- *  IF level LESS THAN 5 THEN
- *      DISPLAY "Private di bawah 5"
- *  ELSE IF level GREATER THAN 5 THEN
- *      DISPLAY "Private di atas 5"
- *  ELSE 
- *      DISPLAY "Private five"
- *  END IF
- * ELSE IF access EQUAL "protected" THEN
- *  IF level LESS THAN 5 THEN
- *      DISPLAY "Protected di bawah 5"
- *  ELSE IF level GREATER THAN 5 THEN
- *      DISPLAY "Protected di atas 5"
- *  ELSE 
- *      DISPLAY "Protected five"
- *  END IF
- * ELSE IF access EQUAL ""
- *  DISPLAY "Input access"
+ * IF minuman EQUAL "Sweet Tea" THEN
+ *      DISPLAY "You choose Sweet Tea, thanks"
+ * ELSE IF minuman EQUAL "Plain Tea" THEN
+ *      DISPLAY "You choose Plain Tea, thanks"
+ * ELSE IF minuman EQUAL "Boba" THEN
+ *      DISPLAY "You choose Boba, thanks"
+ *  ELSE IF minuman EQUAL "Milk Coffee" THEN
+ *      DISPLAY "You choose Milk Coffee, thanks"
+ * ELSE IF minuman EQUAL "Choco Ice" THEN
+ *      DISPLAY "You choose Choco Ice, thanks"
+ * ELSE IF minuman EQUAL ""
+ *  DISPLAY "Input minuman"
  * ELSE 
- *  DISPLAY "Access is not defined"
+ *  DISPLAY "minuman is not defined"
  * END IF
  */
 
 // CODING
 
-var access = "tests";
-var level = 9;
 
-switch (access) {
-    case 'public':
-        if (level < 5) {
-            console.log("Public di bawah 5")
-        } else if (level > 5) {
-            console.log("Public di atas 5")
-        } else {
-            console.log("Public five")
-        }
+var minuman = "Choco Ice";
+
+switch (minuman) {
+    case 'Sweet Tea':
+            console.log("You choose Sweet Tea, thanks")
         break;
-    case 'private':
-        if (level < 5) {
-            console.log("Private di bawah 5")
-        } else if (level > 5) {
-            console.log("Private di atas 5")
-        } else {
-            console.log("Private five")
-        }
+    case 'Plain Tea':
+            console.log("You choose Plain Tea, thanks")
         break;
-    case 'protected':
-        if (level < 5) {
-            console.log("Protected di bawah 5")
-        } else if (level > 5) {
-            console.log("Protected di atas 5")
-        } else {
-            console.log("Protected five")
-        }
+    case 'Boba':
+            console.log("You choose Boba, thanks")
+        break;
+    case 'Milk Coffee':
+            console.log("You choose Milk Coffee, thanks")
+        break;
+    case 'Choco Ice':
+            console.log("You choose Choco Ice, thanks")
         break;
     default:
-        if(access === ""){
-            console.log("Input access")
+        if(minuman === ""){
+            console.log("Input minuman")
         } else{
-            console.log("Access is undefined")
+            console.log("minuman is undefined")
         }
         break;
-}
+    }
+
+
+
+// Task 3
+/**
+ * Algoritma
+ * 
+ * Pilihan Coupon Code untuk Cash back e-commerce
+ * 
+ * a. FreeOngkir
+ * Jika pembelian lebih dari atau sama dengan 50.000, ada potongan 10%
+ * Jika pembelian antara 30.000 dan 50.000, ada potongan 5%
+ * Jika pembelian kurang dari 30.000, ada potongan 2.5%
+ * 
+ * b. Free15%
+ * Jika pembelian lebih dari atau sama dengan 30.000, ada potongan 15%
+ * Jika pembelian kurang dari 30.000, ada potonga 0%
+ * 
+ * 
+ // PSEUDOCODE
+ /**
+  * 
+ * STORE pembelian WITH ANY NUMBER
+ * STORE coupon WITH ANY STRING
+ * 
+ * IF coupon EQUAL "FreeOngkir" THEN
+ *  IF pembelian GREATER THAN OR EQUAL 50.000 THEN
+ *      total EQUAL TO pembelian MULTIPLY 0.9 
+ *      DISPLAY "Total Pembelian anda Rp" total
+ *  ELSE IF pembelian GREATER THAN OR EQUAL 30.000 AND LESS THAN 50.000 THEN
+ *      total EQUAL TO pembelian MULTIPLY 0.95 
+ *      DISPLAY "Total Pembelian anda Rp" total
+ *  ELSE 
+ *      total EQUAL TO pembelian MULTIPLY 0.975
+ *      DISPLAY "Total Pembelian anda Rp" total
+ *  END IF
+ * IF coupon EQUAL "Free15%" THEN
+ *  IF pembelian GREATER THAN OR EQUAL 30.000 THEN
+ *      total EQUAL TO pembelian MULTIPLY 0.85 
+ *      DISPLAY "Total Pembelian anda Rp" total
+ *  ELSE IF pembelian LESS THAN 30.000 THEN
+ *      total EQUAL TO pembelian MULTIPLY 1 
+ *      DISPLAY "Total Pembelian anda Rp" total
+ * ELSE IF access EQUAL ""
+ *  DISPLAY "Pilih coupon"
+ * ELSE 
+ *  DISPLAY "Coupon is not defined"
+ * END IF
+ */
+
+// CODING
+
+var pembelian = 30000;
+var coupon = "Free15%";
+
+switch (coupon) {
+    case 'FreeOngkir':
+        if (pembelian >= 50000) {
+            var total = pembelian * 0.9
+            console.log("Total pembelian anda Rp "+total)
+        } else if (pembelian >= 30000 && pembelian < 50000) {
+            var total = pembelian * 0.95
+            console.log("Total pembelian anda Rp "+total)
+        } else {
+            var total = pembelian * 0.975
+            console.log("Total pembelian anda Rp "+total)
+        }
+        break;
+    case 'Free15%':
+        if (pembelian >= 30000) {
+            var total = pembelian * 0.85
+            console.log("Total pembelian anda Rp "+total)
+        } else {
+            var total = pembelian * 1
+            console.log("Total pembelian anda Rp "+total)
+        break;
+        }
+    }
+
