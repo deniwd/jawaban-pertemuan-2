@@ -31,7 +31,10 @@
 
 // CODING
 
-var Power = 75;
+var prompt = require("prompt-sync")();
+var Power = prompt("Masukkan Power anda: ");
+
+// var Power = 75;
 
 if (Power > 100) {
      console.log("Character is Expert")
@@ -85,8 +88,8 @@ if (Power > 100) {
 
 // CODING
 
-
-var minuman = "Choco Ice";
+// const prompt = require("prompt-sync")();
+var minuman = prompt("Pilih minuman anda: ");
 
 switch (minuman) {
     case 'Sweet Tea':
@@ -164,8 +167,9 @@ switch (minuman) {
 
 // CODING
 
-var pembelian = 30000;
-var coupon = "Free15%";
+// var prompt = require("prompt-sync")();
+var pembelian = prompt("Masukkan nilai pembelian anda: ");
+var coupon = prompt("Coupon yang dipilih: ");
 
 switch (coupon) {
     case 'FreeOngkir':
